@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions
 
 @pytest.fixture(autouse=True)
 def testing():
-   pytest.driver = webdriver.Chrome("C:/yandexdriver.exe")
+   pytest.driver = webdriver.Chrome("C:/yandexdriver.exe") #использую яндекс браузер
    pytest.driver.get('http://petfriends.skillfactory.ru/login')
    pytest.driver.find_element(By.ID, 'email').send_keys('naok6969@gmail.com')
    pytest.driver.find_element(By.ID, 'pass').send_keys('naoki6969')
