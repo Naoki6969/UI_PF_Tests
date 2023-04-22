@@ -5,9 +5,8 @@ from selenium.webdriver.common.by import By
 
 @pytest.fixture(autouse=True)
 def testing():
-   pytest.driver = webdriver.Chrome("C:/yandexdriver.exe")
+   pytest.driver = webdriver.Chrome("C:/yandexdriver.exe") #использую яндекс браузер
    pytest.driver.implicitly_wait(10)
-   # Переходим на страницу авторизации
    pytest.driver.get('http://petfriends.skillfactory.ru/login')
    element = pytest.driver.find_element(By.ID, "email")
 
